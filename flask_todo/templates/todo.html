@@ -10,8 +10,8 @@
         <label>  Add task  <input type="submit"> </input> <input type="text" value="{{ task }}" required minlength="1" name=task>    </label>    
         
     </form>
-    {% if result %}
-    <li>{{ result }}</li>
-    {% endif %}
+    {% for item in result %}
+    <li>{{ item }}</li>
+    {% endfor %}
 </body>
 </html>
