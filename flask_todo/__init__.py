@@ -18,10 +18,8 @@ def create_app():
 
     @app.route('/completed', methods=['GET'])
     def completed():
-        priority = 1
-        completed = 'no'
-        thing = 'die'
-        variables = [priority, thing, completed, time.strftime('%a %H:%M:%S')]
+        todos = {'thing': 'clean garage', 'completed': 'False'}
+        variables = [todos['thing'], todos['completed']]
         return render_template('completed.html', thing=variables)
 
 
