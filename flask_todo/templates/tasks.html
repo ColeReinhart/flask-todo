@@ -6,15 +6,15 @@
     <title>Todo</title>
 </head>
 <body>
-    <h1>Create Todo</h1>
+    <h1>All Tasks</h1>
     <a href='/completed'>Completed</a>
-    <a href='/tasks'>tasks</a>
+    <a href='/'>Create Task</a>
 
-
-    <form method="post">    
-        <label>  Add task  <input type="submit"> </input> <input type="text" value="{{ task }}" required minlength="1" name=task> </label>    
-        
-    </form>
+    <ul>
+        {% for item in thing %}
+            <label><input type="submit" name=button value="{{ completed }}" ><li>{{ item }}</li> </input> </label>
+        {% endfor %}   
+    </ul>
   
 </body>
 </html>
